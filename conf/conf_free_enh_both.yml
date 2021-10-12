@@ -1,0 +1,33 @@
+# filterbank config
+filterbank:
+  n_filters: 128 # 128 for gammatone ,512 for original
+  kernel_size: 16
+  stride: 8
+# Network config
+masknet:
+  n_blocks: 8
+  n_repeats: 3 #4 #3
+  mask_act: relu
+  bn_chan: 256
+  skip_chan: 128
+  hid_chan: 512
+# Training config
+training:
+  epochs: 200  # 200
+  batch_size: 4 #6
+  num_workers: 3 #4
+  half_lr: yes
+  early_stop: yes
+# Optim config
+optim:
+  optimizer: adam
+  lr: 0.001
+  weight_decay: 0.
+# Data config
+data:
+  task: enh_both
+  train_dir: C:/Users/eliashivk/Documents/DSP_final_project/asteroid-master/egs/librimix/ConvTasNet/local/data/wav8k/min/metadata/train-100 # C:/Users/eliashivk/Documents/DSP_final_project/asteroid-master/egs/librimix/ConvTasNet/MiniLibriMix/metadata/train # C:/Users/eliashivk/Documents/DSP_final_project/asteroid-master/egs/librimix/ConvTasNet/local/data/wav8k/min/metadata/train-100
+  valid_dir: C:/Users/eliashivk/Documents/DSP_final_project/asteroid-master/egs/librimix/ConvTasNet/local/data/wav8k/min/metadata/dev # C:/Users/eliashivk/Documents/DSP_final_project/asteroid-master/egs/librimix/ConvTasNet/local/data/wav8k/min/metadata/dev
+  sample_rate: 8000
+  n_src: 2
+  segment: 3
