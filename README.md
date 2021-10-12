@@ -1,4 +1,4 @@
-# MP-GTF with cascded ConvTasNet
+# Cascaded ConvTasNet with MP-GTF
 
 Final Project of DSP course
 
